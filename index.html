@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Gochi+Hand" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top">
+        <h1>catweb</h1>
+        <img src="cat_black.png" alt="" class="topimg" width="350">
+        <div id="slideshow">
+
+            <img src="neko1.jpg" alt="" class="active" width="100%">
+            <img src="neko2.jpeg" alt="" width="100%">
+            <img src="neko3.jpeg" alt="" width="100%">
+            <img src="neko4.jpeg" alt="" width="100%">
+            <img src="neko5.jpeg" alt="" width="100%">
+            <img src="neko6.jpeg" alt="" width="100%">
+            <img src="neko5.jpeg" alt="" width="100%">
+            <img src="neko6.jpeg" alt="" width="100%">
+
+        </div>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+            function slideSwitch() {
+                var $active = $('#slideshow img.active');
+
+                if ($active.length == 0) $active = $('#slideshow img:last');
+
+                var $next = $active.next().length ? $active.next() : $('#slideshow img:first');
+
+                $active.addClass('last-active');
+
+                $next.css({
+                        opacity: 0.0
+                    })
+                    .addClass('active')
+                    .animate({
+                        opacity: 1.0
+                    }, 1000, function() {
+                        $active.removeClass('active last-active');
+                    });
+            }
+            $(function() {
+                setInterval("slideSwitch()", 4000);
+            });
+
+        </script>
+    </div>
+
+    <div class="main">
+        <!--
+        <div class="content one">
+            <div class="maru"> <img src="neko4.jpeg" alt=""> </div>
+
+            <div class="text1">
+                <h2>ネコに癒されてますか</h2>
+                <p>ネコってかわいいですよね<br>ネコを見てたり、さわっていると日常のストレスがどこかに飛んでくような気がします。</p>
+            </div>
+        </div>
+-->
+        <!--
+        <div class="content two">
+
+            <div class="text2">
+                <h2>ネコのどんなところがかわいいか</h2>
+                <p>どこがかわいいかというと、<br>寝顔や、遊んでいる時、ツンデレなところ...などなど、いろいろあります。<br>それが、ネコを飼っていない人にも伝わるように、写真や、ブログを集めました。</p>
+            </div>
+
+            <div class="photos">
+
+                <div class="photo1">
+                    <img src="neko10.jpg" alt="" width="300">
+                </div>
+                <div class="photo2">
+                    <img src="neko11.jpg" alt="" width="300">
+                </div>
+
+                <div class="photo3">
+                    <img src="neko9.jpeg" alt="" width="520">
+                </div>
+            </div>
+-->
+        <!--
+
+
+
+        </div>
+-->
+       
+       <div class="cats">
+        <div class="window1">
+            <img src="neko7.jpg" alt="" width="250px" height="250px">
+        </div>
+
+        <div class="window2">
+            <img src="neko9.jpeg" alt="" width="500px" height="340px">
+        </div>
+
+        <div class="window3">
+            <img src="neko8.jpg" alt="" width="300px" height="250px">
+        </div>
+
+        <div class="window4">
+            <img src="neko10.jpg" alt="" width="300px" height="250px">
+        </div>
+
+        <div class="window5">
+            <img src="neko11.jpg" alt="" width="250px" height="250px">
+        </div>
+            </div>
+        <div class="content three">
+            <a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiTn4n00LbWAhVEe7wKHWVOAUEQFggtMAE&url=http%3A%2F%2Frikkusora.com%2Frikku%2F&usg=AFQjCNHdfxFkKcJ3pR7rKLdNZ5K8wl1ZFQ">変顔猫リュックと愉快な仲間達</a>
+            <a href="http://daijyoyuukoharu.blog62.fc2.com/">こはる日和</a>
+            <a href="https://www.google.co.jp/search?q=%E3%81%AF%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E6%97%A5%E8%A8%98&rlz=1C1DIEZ_enJP737JP744&oq=%E3%81%AF%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E3%81%AB&aqs=chrome.1.69i57j0l5.14940j0j7&sourceid=chrome&ie=UTF-8#">はっちゃん日記</a>
+        </div>
+    </div>
+</body>
+
+</html>
