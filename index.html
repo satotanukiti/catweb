@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Gochi+Hand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/ved.microsoft.icon">
 </head>
 
 <body>
@@ -49,73 +50,73 @@
             $(function() {
                 setInterval("slideSwitch()", 4000);
             });
+
         </script>
     </div>
 
     <div class="main">
         <div class="content one">
-            <div class="maru">
 
-                <div class="text1">
-                    <h2>ネコにいやされてますか?</h2>
-                </div>
-            </div>
-            <!--
-        <div class="content two">
-
-            <div class="text2">
-                <h2>ネコのどんなところがかわいいか</h2>
-                <p>どこがかわいいかというと、<br>寝顔や、遊んでいる時、ツンデレなところ...などなど、いろいろあります。<br>それが、ネコを飼っていない人にも伝わるように、写真や、ブログを集めました。</p>
-            </div>
-
-            <div class="photos">
-
-                <div class="photo1">
-                    <img src="neko10.jpg" alt="" width="300">
-                </div>
-                <div class="photo2">
-                    <img src="neko11.jpg" alt="" width="300">
-                </div>
-
-                <div class="photo3">
-                    <img src="neko9.jpeg" alt="" width="520">
-                </div>
-            </div>
--->
-            <!--
-
-
-
-        </div>
--->
+            <h2>ネコにいやされてますか?</h2>
 
             <div class="cats">
                 <div class="window1">
-                    <img src="neko7.jpg" alt="" width="250px" height="250px">
+                    <img src="neko7.jpg" alt="" width="250px" height="250px" class="photo">
                 </div>
 
                 <div class="window2">
-                    <img src="neko9.jpeg" alt="" width="500px" height="340px">
+                    <img src="neko9.jpeg" alt="" width="500px" height="340px" class="photo">
                 </div>
 
                 <div class="window3">
-                    <img src="neko8.jpg" alt="" width="300px" height="250px">
+                    <img src="neko8.jpg" alt="" width="300px" height="250px" class="photo">
                 </div>
 
                 <div class="window4">
-                    <img src="neko10.jpg" alt="" width="300px" height="250px">
+                    <img src="neko10.jpg" alt="" width="300px" height="250px" class="photo">
                 </div>
 
                 <div class="window5">
-                    <img src="neko11.jpg" alt="" width="250px" height="250px">
+                    <img src="neko11.jpg" alt="" width="250px" height="250px" class="photo">
                 </div>
             </div>
+
+            <script>
+                $(function() {
+                    $('window2').css("opacity", "0");
+                    $(window).scroll(function() {
+                        $(".effect").each(function() {
+                            var imgPos = $(this).offset().top;
+                            var scroll = $(window).scrollTop();
+                            var windowHeight = $(window).height();
+                            if (scroll > imgPos - windowHeight + windowHeight / 5) {
+                                $("window2", this).css("opacity", "1");
+                                $("window2", this).css({
+                                    "font-size": "100px",
+                                    "padding": "0 20px 40px"
+                                });
+                            } else {
+                                $("window2", this).css("opacity", "0");
+                                $("window2", this).css({
+                                    "transform": "20px",
+                                    "padding": "20px"
+                                });
+                            }
+                        });
+                    });
+                }); >
+
+            </script>
+
+
+
             <div class="content three">
                 <a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiTn4n00LbWAhVEe7wKHWVOAUEQFggtMAE&url=http%3A%2F%2Frikkusora.com%2Frikku%2F&usg=AFQjCNHdfxFkKcJ3pR7rKLdNZ5K8wl1ZFQ">変顔猫リュックと愉快な仲間達</a>
                 <a href="http://daijyoyuukoharu.blog62.fc2.com/">こはる日和</a>
-                <a href="https://www.google.co.jp/search?q=%E3%81%AF%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E6%97%A5%E8%A8%98&rlz=1C1DIEZ_enJP737JP744&oq=%E3%81%AF%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E3%81%AB&aqs=chrome.1.69i57j0l5.14940j0j7&sourceid=chrome&ie=UTF-8#">はっちゃん日記</a>
+                <a href="http://hatchannikki.blog107.fc2.com/">はっちゃん日記</a>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
