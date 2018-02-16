@@ -136,20 +136,20 @@ h2 {
     top: 40px;
     left: 400px;
     background: #fff;
-    -webkit-animation-name: slidewindow2;
-    animation-duration: 2s;
-    -webkit-animation-fill-mode: both;
 }
 
-@-webkit-keyframes slidewindow2{
-    from{
-        transform: translate(100%,0%)
-    }
-    
-    to{
-        transform: translate(0%,0%)
-    }
+effect i {
+  height: 120px;
+  padding: 20px;
+  font-size: 100px;
+  transition: .8s;
 }
+.effect div {
+  margin: auto;
+  transition: .8s;
+  transition-delay: .8s;
+}
+
 
 .window3 {
     height: 250px;
