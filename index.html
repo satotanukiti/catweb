@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>catweb</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Gochi+Hand" rel="stylesheet">
@@ -28,17 +28,12 @@
 
         </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="neko12.jpg"></script>
         <script type="text/javascript">
             function slideSwitch() {
                 var $active = $('#slideshow img.active');
-
                 if ($active.length == 0) $active = $('#slideshow img:last');
-
                 var $next = $active.next().length ? $active.next() : $('#slideshow img:first');
-
                 $active.addClass('last-active');
-
                 $next.css({
                         opacity: 0.0
                     })
@@ -53,8 +48,16 @@
                 setInterval("slideSwitch()", 4000);
             });
         </script>
+        <script src="neko7.jpg"></script>
+
+        <script>
+            window.sr = new neko7();
+            sr.reveal('.window1');
+        </script>
+
+
     </div>
-    
+
 
     <div class="main">
         <div class="content one">
@@ -82,18 +85,7 @@
                     <img src="neko11.jpg" alt="" width="250px" height="250px" class="photo">
                 </div>
             </div>
-
-            <div class="effect">
-                <i class="fa fa-child　fa-5x"></i>
-                <div>
-                    <h2>take</h2>
-                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                </div>
-
-            </div>
             
-            <div class="demo">これはテストです。</div>
-
             <div class="content three">
                 <a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiTn4n00LbWAhVEe7wKHWVOAUEQFggtMAE&url=http%3A%2F%2Frikkusora.com%2Frikku%2F&usg=AFQjCNHdfxFkKcJ3pR7rKLdNZ5K8wl1ZFQ">変顔猫リュックと愉快な仲間達</a>
                 <a href="http://daijyoyuukoharu.blog62.fc2.com/">こはる日和</a>

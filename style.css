@@ -138,19 +138,6 @@ h2 {
     background: #fff;
 }
 
-effect i {
-  height: 120px;
-  padding: 20px;
-  font-size: 100px;
-  transition: .8s;
-}
-.effect div {
-  margin: auto;
-  transition: .8s;
-  transition-delay: .8s;
-}
-
-
 .window3 {
     height: 250px;
     width: 300px;
