@@ -4,11 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <title>catweb</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Gochi+Hand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
     <link rel="shortcut icon" href="favicon.ico" type="image/ved.microsoft.icon">
+    <script type="text/javascript">
+        function slideSwitch() {
+            var $active = $('#slideshow img.active');
+            if ($active.length == 0) $active = $('#slideshow img:last');
+            var $next = $active.next().length ? $active.next() : $('#slideshow img:first');
+            $active.addClass('last-active');
+            $next.css({
+                    opacity: 0.0
+                })
+                .addClass('active')
+                .animate({
+                    opacity: 1.0
+                }, 1000, function() {
+                    $active.removeClass('active last-active');
+                });
+        }
+        $(function() {
+            setInterval("slideSwitch()", 4000);
+        });
+    </script>
+
+    <script type="text/javascript" src="iziModal.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="iziModal.css" media="screen" />
+    <script type="text/javascript">
+        $(function() {
+            $(".iziModal1").iziModal({
+                group: "group1",
+                loop: true
+            });
+        })
+    </script>
+
 </head>
 
 <body>
@@ -16,7 +48,6 @@
         <h1>catweb</h1>
         <img src="cat_black.png" alt="" class="topimg" width="350">
         <div id="slideshow">
-
             <img src="neko1.jpg" alt="" class="active" width="100%">
             <img src="neko2.jpeg" alt="" width="100%">
             <img src="neko3.jpeg" alt="" width="100%">
@@ -27,33 +58,8 @@
             <img src="neko6.jpeg" alt="" width="100%">
 
         </div>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript">
-            function slideSwitch() {
-                var $active = $('#slideshow img.active');
-                if ($active.length == 0) $active = $('#slideshow img:last');
-                var $next = $active.next().length ? $active.next() : $('#slideshow img:first');
-                $active.addClass('last-active');
-                $next.css({
-                        opacity: 0.0
-                    })
-                    .addClass('active')
-                    .animate({
-                        opacity: 1.0
-                    }, 1000, function() {
-                        $active.removeClass('active last-active');
-                    });
-            }
-            $(function() {
-                setInterval("slideSwitch()", 4000);
-            });
-        </script>
-        <script src="neko7.jpg"></script>
 
-        <script>
-            window.sr = new neko7();
-            sr.reveal('.window1');
-        </script>
+
 
 
     </div>
@@ -66,35 +72,162 @@
 
             <div class="cats">
                 <div class="window1">
-                    <img src="neko7.jpg" alt="" width="250px" height="250px" class="photo">
+                    <img src="neko7.jpg" alt="" width="260px" height="260px" class="photo">
                 </div>
-
                 <div class="window2">
-                    <img src="neko9.jpeg" alt="" width="500px" height="340px" class="photo">
+                    <img src="neko9.jpeg" alt="" width="510px" height="350px" class="photo">
                 </div>
-
                 <div class="window3">
-                    <img src="neko8.jpg" alt="" width="300px" height="250px" class="photo">
+                    <img src="neko8.jpg" alt="" width="310px" height="260px" class="photo">
                 </div>
 
                 <div class="window4">
-                    <img src="neko10.jpg" alt="" width="300px" height="250px" class="photo">
+                    <img src="neko10.jpg" alt="" width="310px" height="260px" class="photo">
                 </div>
 
                 <div class="window5">
-                    <img src="neko11.jpg" alt="" width="250px" height="250px" class="photo">
+                    <img src="neko11.jpg" alt="" width="360px" height="260px" class="photo">
                 </div>
             </div>
-            
-            <div class="content three">
-                <a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiTn4n00LbWAhVEe7wKHWVOAUEQFggtMAE&url=http%3A%2F%2Frikkusora.com%2Frikku%2F&usg=AFQjCNHdfxFkKcJ3pR7rKLdNZ5K8wl1ZFQ">変顔猫リュックと愉快な仲間達</a>
-                <a href="http://daijyoyuukoharu.blog62.fc2.com/">こはる日和</a>
-                <a href="http://hatchannikki.blog107.fc2.com/">はっちゃん日記</a>
+        </div>
+
+        <div class="content two">
+            <div>
+                <a data-iziModal-open=".iziModal1"><img src="neko7.jpg" alt=""></a>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao1.jpg" alt="" width="600px" height="650px">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao2.jpg" alt="">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao3.jpg" alt="">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao4.jpg" alt="">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao5.jpg" alt="">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao6.jpg" alt="">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao7.jpg" alt="">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao8.jpg" alt="">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao9.jpg" alt="">
+                </div>
+                <div class="iziModal1" data-izimodal-group="group1" izimodal-loop="">
+                    <img src="neko%20kao10.jpg" alt="">
+                </div>
             </div>
+
+
+            <div>
+                <div class="iziModal2" data-izimodal-group="group2" izimodal-loop="">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="content three">
+            <a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiTn4n00LbWAhVEe7wKHWVOAUEQFggtMAE&url=http%3A%2F%2Frikkusora.com%2Frikku%2F&usg=AFQjCNHdfxFkKcJ3pR7rKLdNZ5K8wl1ZFQ">変顔猫リュックと愉快な仲間達</a>
+            <a href="http://daijyoyuukoharu.blog62.fc2.com/">こはる日和</a>
+            <a href="http://hatchannikki.blog107.fc2.com/">はっちゃん日記</a>
         </div>
     </div>
 
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                $(".cats").each(function() {
 
+                    var imgPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+
+                    if (scroll > imgPos - windowHeight + windowHeight / 10)
+
+                    {
+                        $(".window1", this).css({
+                            "opacity": "1",
+                            "left": "80px"
+                        });
+                    } else {
+
+                        $(".window1", this).css({
+                            "opacity": "0",
+                            "left": "-50px"
+                        });
+                    }
+
+                    if (scroll > imgPos - windowHeight + windowHeight / 8)
+
+                    {
+                        $(".window2", this).css({
+                            "opacity": "1",
+                            "left": "450px"
+                        });
+                    } else {
+
+                        $(".window2", this).css({
+                            "opacity": "0",
+                            "left": "-50px"
+                        });
+                    }
+
+                    if (scroll > imgPos - windowHeight + windowHeight / 7)
+
+                    {
+                        $(".window3", this).css({
+                            "opacity": "1",
+                            "left": "1100px"
+                        });
+                    } else {
+
+                        $(".window3", this).css({
+                            "opacity": "0",
+                            "left": "-100px"
+                        });
+                    }
+
+                    if (scroll > imgPos - windowHeight + windowHeight / 2)
+
+                    {
+                        $(".window4", this).css({
+                            "opacity": "1",
+                            "left": "250px"
+                        });
+                    } else {
+
+                        $(".window4", this).css({
+                            "opacity": "0",
+                            "left": "-50px"
+                        });
+                    }
+
+                    if (scroll > imgPos - windowHeight + windowHeight / 2)
+
+                    {
+                        $(".window5", this).css({
+                            "opacity": "1",
+                            "left": "900px"
+                        });
+                    } else {
+
+                        $(".window5", this).css({
+                            "opacity": "0",
+                            "left": "-50px"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
